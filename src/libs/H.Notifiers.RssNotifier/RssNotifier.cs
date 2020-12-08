@@ -70,7 +70,7 @@ namespace H.Notifiers
                 return false;
             }
 
-            var isFirstFeed = LastTitle == null;
+            var isFirstFeed = string.IsNullOrWhiteSpace(LastTitle);
 
             LastTitle = title;
 

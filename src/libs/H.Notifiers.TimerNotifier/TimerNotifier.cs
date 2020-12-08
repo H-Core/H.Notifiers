@@ -101,11 +101,11 @@ namespace H.Notifiers
             catch (Exception exception)
 #pragma warning restore CA1031 // Do not catch general exception types
             {
-                Log($"Exception: {exception}");
+                OnLogReceived($"Exception: {exception}");
 
                 OnExceptionOccurred(exception);
 
-                Log($"Disabling module: {Name}");
+                OnLogReceived($"Disabling module: {Name}");
                 Disable();
 
                 CurrentCount = 0;
