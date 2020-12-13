@@ -5,11 +5,18 @@ using H.Core.Notifiers;
 
 namespace H.Notifiers
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public class TimerNotifier : Notifier
     {
         #region Properties
 
         private int _intervalInMilliseconds;
+        
+        /// <summary>
+        /// 
+        /// </summary>
         public int IntervalInMilliseconds {
             get => _intervalInMilliseconds;
             set {
@@ -27,7 +34,14 @@ namespace H.Notifiers
             }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
         public int Frequency { get; set; }
+        
+        /// <summary>
+        /// 
+        /// </summary>
         public int RequiredCount { get; set; }
 
         private Timer? Timer { get; set; }
@@ -39,6 +53,9 @@ namespace H.Notifiers
 
         #region Constructors
 
+        /// <summary>
+        /// 
+        /// </summary>
         public TimerNotifier()
         {
             AddSetting(nameof(IntervalInMilliseconds), o => IntervalInMilliseconds = o, Positive, int.MaxValue);
@@ -50,6 +67,9 @@ namespace H.Notifiers
 
         #region IDisposable
 
+        /// <summary>
+        /// 
+        /// </summary>
         public override void Dispose()
         {
             base.Dispose();
@@ -65,11 +85,19 @@ namespace H.Notifiers
 
         #region Protected methods
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         protected virtual Task<bool> OnResultAsync()
         {
             return Task.FromResult(true);
         }
-
+        
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         protected virtual bool OnResult()
         {
             return true;

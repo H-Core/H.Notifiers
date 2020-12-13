@@ -6,13 +6,11 @@
   </PropertyGroup>
 
   <PropertyGroup Label="NuGet">
-    <Version>0.9.5</Version>
     <Description></Description>
-    <PackageReleaseNotes>To H.Core 0.9.5.</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="H.Core" Version="0.9.5" />
+    <PackageReference Include="H.Core" Version="0.12.0" />
     <PackageReference Include="System.ServiceModel.Syndication" Version="5.0.0" />
   </ItemGroup>
 
