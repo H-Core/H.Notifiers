@@ -13,7 +13,7 @@ namespace H.Notifiers
         #region Properties
 
         private int _intervalInMilliseconds;
-        
+
         /// <summary>
         /// 
         /// </summary>
@@ -32,6 +32,15 @@ namespace H.Notifiers
                 Timer.Elapsed += OnElapsed;
                 Timer.Start();
             }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public TimeSpan Interval
+        {
+            get => TimeSpan.FromMilliseconds(IntervalInMilliseconds);
+            set => IntervalInMilliseconds = (int)value.TotalMilliseconds;
         }
 
         /// <summary>
