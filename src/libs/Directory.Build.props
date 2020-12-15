@@ -7,10 +7,9 @@
   </PropertyGroup>
 
   <PropertyGroup Label="Nuget">
-    <Version>0.13.12</Version>
+    <Version>0.14.6</Version>
     <PackageReleaseNotes>
-      To H.Core 0.13.12.
-      Added TimerNotifier.Interval property.
+      To H.Core 0.14.6.
     </PackageReleaseNotes>
     <GeneratePackageOnBuild Condition=" '$(Configuration)' == 'Release' ">true</GeneratePackageOnBuild>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>

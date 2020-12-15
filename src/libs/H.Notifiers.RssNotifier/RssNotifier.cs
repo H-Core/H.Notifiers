@@ -14,9 +14,15 @@ namespace H.Notifiers
     {
         #region Properties
 
-        private string Url { get; set; } = string.Empty;
+        /// <summary>
+        /// 
+        /// </summary>
+        public string Url { get; set; } = string.Empty;
 
-        private string LastTitle { get; set; } = string.Empty;
+        /// <summary>
+        /// 
+        /// </summary>
+        public string LastTitle { get; private set; } = string.Empty;
 
         #endregion
 
