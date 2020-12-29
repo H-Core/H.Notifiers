@@ -3,6 +3,7 @@ using System.Linq;
 using System.Net;
 using System.ServiceModel.Syndication;
 using System.Xml;
+using H.Core;
 using H.Core.Settings;
 
 namespace H.Notifiers
@@ -33,7 +34,7 @@ namespace H.Notifiers
         /// </summary>
         public RssNotifier()
         {
-            AddSetting(nameof(Url), o => Url = o, Always, Url, SettingType.Path);
+            AddSetting(nameof(Url), o => Url = o, Any, Url, SettingType.Path);
 
             AddVariable("$rss_last_title$", () => LastTitle);
         }
@@ -62,7 +63,7 @@ namespace H.Notifiers
             }
             catch (WebException exception)
             {
-                Print($"Rss Web Exception: {exception.Message}");
+                this.Print($"Rss Web Exception: {exception.Message}");
 
                 return false;
             }

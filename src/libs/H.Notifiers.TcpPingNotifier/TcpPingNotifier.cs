@@ -38,11 +38,11 @@ namespace H.Notifiers
         /// <returns></returns>
         protected override bool OnResult()
         {
-            var isAvailableNetworkActive = GetVariable("$internet$", true);
-            if (OnlyIfNetworkActive && !isAvailableNetworkActive)
-            {
-                return false;
-            }
+            //var isAvailableNetworkActive = GetVariable("$internet$", true);
+            //if (OnlyIfNetworkActive && !isAvailableNetworkActive)
+            //{
+            //    return false;
+            //}
 
             try
             {

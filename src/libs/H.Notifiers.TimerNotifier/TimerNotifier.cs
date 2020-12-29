@@ -134,16 +134,9 @@ namespace H.Notifiers
                 LastEventTime = DateTime.Now;
                 CurrentCount = 0;
             }
-#pragma warning disable CA1031 // Do not catch general exception types
             catch (Exception exception)
-#pragma warning restore CA1031 // Do not catch general exception types
             {
-                OnLogReceived($"Exception: {exception}");
-
                 OnExceptionOccurred(exception);
-
-                OnLogReceived($"Disabling module: {Name}");
-                Disable();
 
                 CurrentCount = 0;
             }
