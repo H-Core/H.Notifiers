@@ -57,7 +57,7 @@ namespace H.Notifiers
             SyndicationFeed feed;
             try
             {
-                using var reader = XmlReader.Create(Url);
+                using var reader = XmlReader.Create(Url, new XmlReaderSettings());
 
                 feed = SyndicationFeed.Load(reader);
             }
